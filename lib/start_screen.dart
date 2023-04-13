@@ -2,7 +2,6 @@ import 'package:battle_men_and_women/fortune_wheel_screen.dart';
 import 'package:battle_men_and_women/services/screen_navigation_const.dart';
 import 'package:flutter/material.dart';
 
-List<Color> colors = [  Colors.redAccent,  Colors.greenAccent,  Colors.blueAccent,  Colors.amberAccent,];
 
 class StartScreen extends StatelessWidget {
   const StartScreen({Key? key});
@@ -64,6 +63,7 @@ class StartScreen extends StatelessWidget {
                           labelText: 'Enter Address 1',
                         ),
                         keyboardType: TextInputType.text,
+                        // TODO: Add input validation RegExp(r'^0x[0-9a-fA-F]{40}$')
                         onChanged: (value) {
                           // TODO: Store value somewhere
                         },
@@ -74,6 +74,7 @@ class StartScreen extends StatelessWidget {
                           labelText: 'Enter Address 2',
                         ),
                         keyboardType: TextInputType.text,
+                        // TODO: Add input validation RegExp(r'^0x[0-9a-fA-F]{40}$')
                         onChanged: (value) {
                           // TODO: Store value somewhere
                         },
