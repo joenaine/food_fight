@@ -65,7 +65,7 @@ class StartScreen extends StatelessWidget {
                         keyboardType: TextInputType.text,
                         // TODO: Add input validation RegExp(r'^0x[0-9a-fA-F]{40}$')
                         onChanged: (value) {
-                          // TODO: Store value somewhere
+                          // TODO: Store value (then pass address to nodejs backend to send NFT)
                         },
                       ),
                       const SizedBox(height: 16),
@@ -76,7 +76,7 @@ class StartScreen extends StatelessWidget {
                         keyboardType: TextInputType.text,
                         // TODO: Add input validation RegExp(r'^0x[0-9a-fA-F]{40}$')
                         onChanged: (value) {
-                          // TODO: Store value somewhere
+                          // TODO: Store value (then pass address to nodejs backend to send NFT)
                         },
                       ),
                     ],
