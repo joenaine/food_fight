@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 
-import 'package:battle_men_and_women/home.dart';
+import 'package:battle_men_and_women/game_screen.dart';
 import 'package:battle_men_and_women/services/screen_navigation_const.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_fortune_wheel/flutter_fortune_wheel.dart';
