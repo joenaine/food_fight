@@ -2,15 +2,9 @@ import 'package:battle_men_and_women/fortune_wheel_screen.dart';
 import 'package:battle_men_and_women/services/screen_navigation_const.dart';
 import 'package:flutter/material.dart';
 
-List<Color> colors = [
-  Colors.redAccent,
-  Colors.greenAccent,
-  Colors.blueAccent,
-  Colors.amberAccent,
-];
 
 class StartScreen extends StatelessWidget {
-  const StartScreen({super.key});
+  const StartScreen({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -53,13 +47,50 @@ class StartScreen extends StatelessWidget {
                         color: Colors.black),
                   ])),
               const SizedBox(height: 50),
+              // Container for BSC Address Inputs
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                  child: Column(
+                    children: [
+                      TextFormField(
+                        decoration: const InputDecoration(
+                          labelText: 'Enter Address 1',
+                        ),
+                        keyboardType: TextInputType.text,
+                        // TODO: Add input validation RegExp(r'^0x[0-9a-fA-F]{40}$')
+                        onChanged: (value) {
+                          // TODO: Store value (then pass address to nodejs backend to send NFT)
+                        },
+                      ),
+                      const SizedBox(height: 16),
+                      TextFormField(
+                        decoration: const InputDecoration(
+                          labelText: 'Enter Address 2',
+                        ),
+                        keyboardType: TextInputType.text,
+                        // TODO: Add input validation RegExp(r'^0x[0-9a-fA-F]{40}$')
+                        onChanged: (value) {
+                          // TODO: Store value (then pass address to nodejs backend to send NFT)
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+              ),
               ElevatedButton(
                 onPressed: () {
                   changeScreen(context, const FortuneWheelScreen());
                 },
                 style: buttonStyle,
                 child: const Text('Play', style: TextStyle(fontSize: 25)),
-              )
+              ),
+              const SizedBox(height: 32),
             ],
           ),
         ),
