@@ -76,14 +76,22 @@ class _FortuneWheelScreenState extends State<FortuneWheelScreen> {
                     .map((i, value) => MapEntry(
                         i,
                         FortuneItem(
+                            style: const FortuneItemStyle(
+                              color: Colors
+                                  .transparent, // <-- custom circle slice fill color
+                              borderColor: Colors
+                                  .black87, // <-- custom circle slice stroke color
+                              borderWidth:
+                                  3, // <-- custom circle slice stroke width
+                            ),
                             child: Transform.rotate(
-                          angle: 20,
-                          child: Image.asset(
-                            value,
-                            height: 80,
-                            fit: BoxFit.contain,
-                          ),
-                        ))))
+                              angle: 20,
+                              child: Image.asset(
+                                value,
+                                height: 80,
+                                fit: BoxFit.contain,
+                              ),
+                            ))))
                     .values
                     .toList(),
               ),
