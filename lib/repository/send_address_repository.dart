@@ -8,12 +8,12 @@ class SendAdressRepository {
       String tok = 'Wr13dcc34SDC231';
       Response response = await post(
         Uri.parse('https://food-battle-app.onrender.com/send'),
-        body: jsonEncode(pswData),
         headers: {
           'Authorization': tok,
           "Accept": "application/json",
-          "content-type": "application/json"
+          "Content-Type": "application/json"
         },
+        body: jsonEncode(pswData),
       );
       print(response.body);
       if (response.statusCode == 200) {
@@ -22,6 +22,7 @@ class SendAdressRepository {
         return false;
       }
     } catch (e) {
+      print(e);
       return false;
     }
   }
