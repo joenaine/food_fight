@@ -92,7 +92,6 @@ class _StartScreenState extends State<StartScreen> {
 
                               return defaultValidator;
                             },
-                            // TODO: Add input validation RegExp(r'^0x[0-9a-fA-F]{40}$')
                           ),
                           const SizedBox(height: 16),
                           TextFormField(
@@ -107,7 +106,6 @@ class _StartScreenState extends State<StartScreen> {
 
                               return defaultValidator;
                             },
-                            // TODO: Add input validation RegExp(r'^0x[0-9a-fA-F]{40}$')
                           ),
                         ],
                       ),
