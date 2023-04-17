@@ -14,6 +14,6 @@ class Validator {
       return null;
     }
     if (value!.isEmpty) return 'Empty Field';
-    return 'Addres is not valid';
+    return 'Address is not valid';
   }
 }
